@@ -1,0 +1,49 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Modal | A11YUI</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/harmony.css">
+        <!-- <link rel="stylesheet" href="//d2725r7zw288co.cloudfront.net/cdn/v1/corp-gen/harmony.css"> -->
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body class="hello">
+
+        <nav class="masthead">
+            <div class="container">
+                <a href="/" class="masthead__brand">a11yui</a>
+            </div>
+        </nav>
+
+        <main class="container">
+            <h1>Modal</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor et molestiae, tenetur saepe sint veniam ut ipsam quasi assumenda aliquam sit architecto laborum! Labore quas numquam nam dolore ipsum, repellendus!</p>
+            <button class="button" data-open-modal="#modal-example">Open Modal</button>
+        </main>
+
+        <div id="modal-example" class="modal-overlay" style="display: none;">
+            <div class="modal card" role="dialog">
+                <button class="button button--close" data-trap-start data-open-focus data-close-modal type="button">
+                    <span class="icon icon--close" aria-hidden="true"></span>
+                </button>
+                <h1 class="card__title">Modal Example</h1>
+                <div class="card__body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aspernatur vero laborum alias est, repudiandae eius esse voluptate ex sit neque quidem reiciendis, accusantium dolorum distinctio aliquam non deserunt sequi.</p>
+                </div>
+                <div class="card__footer">
+                    <button class="button" data-close-modal data-trap-end>Done</button>
+                </div>
+            </div>
+        </div>
+        
+        <script src="modal.js"></script>
+<!--         <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script> -->
+    </body>
+</html>

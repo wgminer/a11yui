@@ -1,0 +1,10 @@
+extends ../../partials/base
+
+block page
+    main.page
+        .container
+            h1 Speaker
+            button.button(onclick="Speaker.play('I love lamp')") Click Me!
+            button.button(onclick="Speaker.asset('Loud noises')") Click Me!
+
+    script(src="speaker.js")
