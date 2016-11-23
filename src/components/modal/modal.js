@@ -5,6 +5,13 @@ var Modal = (function () {
     var body = document.getElementsByTagName('body')[0];
     var triggers = document.querySelectorAll('[data-open-modal]');
 
+    var siblings = function(node, children) {
+        var children = [].slice.call(node.parentNode.childNodes);
+        return children.filter(function(child) {
+            return node != child && child.nodeType === 1;
+        });
+    }
+
     var init = function(trigger) {
 
         var modalSelector = trigger.getAttribute('data-open-modal');
@@ -23,7 +30,10 @@ var Modal = (function () {
             body.className += ' u--no-scroll';
 
             // 2. Aria hide adjacent elements
-            // $modal.siblings().attr('aria-hidden', true);
+            siblings(modal).forEach(function (sibling) {
+                console.log(sibling);
+                sibling.setAttribute('aria-hidden', true);
+            });
 
             // 3. Show modal
             modal.style.display = 'block';
@@ -67,7 +77,9 @@ var Modal = (function () {
 
             modal.style.display = 'none';
 
-            // $modal.siblings().attr('aria-hidden', false);
+            siblings(modal).forEach(function (sibling) {
+                sibling.setAttribute('aria-hidden', false);
+            });
             
             body.className = body.className.replace(' u--no-scroll', '');
 
@@ -76,7 +88,9 @@ var Modal = (function () {
             console.log('close!');
         }
 
-        open();
+        trigger.addEventListener('click', function (e) {
+            open();
+        });
 
     }
 

@@ -5,7 +5,7 @@ var Speaker = (function (document) {
     var module = {};
     var speaker, timeout, body;
 
-    module.say = function (text) {
+    module.play = function (text) {
         speaker.innerHTML = text;
         clearTimeout(timeout);
         timeout = setTimeout(function () {
@@ -15,12 +15,12 @@ var Speaker = (function (document) {
 
     module.polite = function (text) {
         speaker.setAttribute('aria-live', 'polite');
-        module.say(text);
+        module.play(text);
     }
 
     module.assert = function (text) {
         speaker.setAttribute('aria-live', 'assertive');
-        module.say(text);
+        module.play(text);
     }
 
     var init = function () {
