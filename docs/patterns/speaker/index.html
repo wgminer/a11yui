@@ -5,31 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home | A11YUI</title>
+    <title></title>
     <link rel="stylesheet" href="https://d2725r7zw288co.cloudfront.net/cdn/v1/corp-gen/harmony.css">
-    <link rel="stylesheet" href="css/a11yui.css">
+    <link rel="stylesheet" href="undefinedcss/a11yui.css">
   </head>
   <body>
     <div class="masthead">
       <div class="container"><a class="masthead__brand" href="/">A11YUI</a></div>
     </div>
     <main>
-      <div class="container">
-        <section class="splash">
-          <h1>A11YUI</h1>
-          <p>Collection of accessible UI patterns<br> crafted with aesthetics and user experience<br> at the forefront.</p>
-        </section>
-        <section class="patterns">
-          <h2>Patterns</h2>
-          <ul>
-            <li><a href="/patterns/modal">Modal</a></li>
-            <li><a href="/patterns/speaker">Speaker</a></li>
-            <li><a href="/patterns/dropdown">Dropdown</a></li>
-            <li><a href="/patterns/form">Form</a></li>
-            <li><a href="">Progress Bar</a></li>
-          </ul>
-        </section>
-      </div>
+      <main class="page">
+        <div class="container">
+          <h1>Speaker</h1>
+          <button class="button" onclick="Speaker.play('I love lamp')">Click Me!</button>
+          <button class="button" onclick="Speaker.asset('Loud noises')">Click Me!</button>
+        </div>
+      </main>
+      <script src="speaker.js"></script>
     </main>
     <script>
       window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;

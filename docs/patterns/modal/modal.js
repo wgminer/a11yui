@@ -1,6 +1,5 @@
-'use strict';
-
-var Modal = (function () {
+var Modal = (function (document) {
+    'use strict';
 
     var body = document.getElementsByTagName('body')[0];
     var triggers = document.querySelectorAll('[data-open-modal]');
@@ -18,20 +17,14 @@ var Modal = (function () {
         var modal = document.querySelectorAll(modalSelector)[0];
         var trapStart = modal.querySelectorAll('[data-trap-start]')[0];
         var trapEnd = modal.querySelectorAll('[data-trap-end]')[0];
-        var listeners = [];
-
-        console.log('Setup');
 
         var open = function () {
-
-            console.log('Opening modal!');
 
             // 1. Add no scroll class
             body.className += ' u--no-scroll';
 
             // 2. Aria hide adjacent elements
             siblings(modal).forEach(function (sibling) {
-                console.log(sibling);
                 sibling.setAttribute('aria-hidden', true);
             });
 
@@ -42,7 +35,6 @@ var Modal = (function () {
             modal.querySelectorAll('[data-open-focus]')[0].focus();
 
             // 5. Setup focus trap
-            listeners.push({element: trapEnd, event: 'keydown'});
             trapEnd.addEventListener('keydown', function (e) {
                 if (e.which == 9 && !e.shiftKey) {
                     e.preventDefault(); 
@@ -50,7 +42,6 @@ var Modal = (function () {
                 }
             });
 
-            listeners.push({element: trapStart, event: 'keydown'});
             trapStart.addEventListener('keydown', function (e) {
                 if (e.shiftKey && e.keyCode == 9) {
                     e.preventDefault(); 
@@ -75,17 +66,20 @@ var Modal = (function () {
 
         var close = function () {
 
+            // 1. Hide the modal
             modal.style.display = 'none';
 
+            // 2. Nullify the aria-hidden on siblings
             siblings(modal).forEach(function (sibling) {
                 sibling.setAttribute('aria-hidden', false);
             });
             
+            // 3. Remove the no-scroll on the <body>
             body.className = body.className.replace(' u--no-scroll', '');
 
+            // 4. place :focus back on the trigger
             trigger.focus();
             
-            console.log('close!');
         }
 
         trigger.addEventListener('click', function (e) {
@@ -96,4 +90,4 @@ var Modal = (function () {
 
     triggers.forEach(init);
 
-})();
+})(document);

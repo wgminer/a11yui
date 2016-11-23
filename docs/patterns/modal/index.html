@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modal | A11YUI</title>
+    <link rel="stylesheet" href="https://d2725r7zw288co.cloudfront.net/cdn/v1/corp-gen/harmony.css">
+    <link rel="stylesheet" href="../../css/a11yui.css">
+  </head>
+  <body>
+    <div class="masthead">
+      <div class="container"><a class="masthead__brand" href="/">A11YUI</a></div>
+    </div>
+    <main>
+      <div class="page">
+        <div class="container">
+          <h1>Modal</h1>
+          <button class="button" data-open-modal="#modal-example">Open Modal</button>
+          <h2>Requirements</h2>
+          <p>To pull of an accessible modal you need a few things:</p>
+          <ol>
+            <li> </li>
+          </ol>
+        </div>
+      </div>
+      <div class="modal-overlay" id="modal-example" style="display: none">
+        <div class="modal card" role="dialog">
+          <button class="button button--close" data-trap-start="" data-open-focus="" data-close-modal="" type="button"><span class="icon icon--close" aria-hidden="true"></span></button>
+          <h1 class="card__title">Modal Example</h1>
+          <div class="card__body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aspernatur vero laborum alias est, repudiandae eius esse voluptate ex sit neque quidem reiciendis, accusantium dolorum distinctio aliquam non deserunt sequi.</p>
+          </div>
+          <div class="card__footer">
+            <button class="button" data-close-modal="" data-trap-end="">Done</button>
+          </div>
+        </div>
+      </div>
+      <script src="modal.js"></script>
+    </main>
+    <script>
+      window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+      ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  </body>
+</html>

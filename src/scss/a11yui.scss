@@ -11,20 +11,38 @@
 
     &__brand {
         text-transform: uppercase;
-        letter-spacing: 2px;
+        letter-spacing: .25em;
         color: #fff;
     }
 }
 
 .splash {
-    text-align: center;
-    background-color: green; 
+    // text-align: center;
+    // background-color: green; 
     padding: 10vh 0;
+
+    h1 {
+        font-weight: 700;
+        letter-spacing: .1em;
+        font-size: 4rem;
+        padding: .15em .3em;
+        line-height: 1;
+        color: #fff;
+        background-color: orange;
+        display: inline-block;
+    }
 
     p {
         font-size: 1.5rem;
-        max-width: 30rem;
-        margin: 0 auto;
+        // margin: 0 auto;
+    }
+}
+
+.patterns {
+
+    ul {
+        list-style: none;
+        padding: 0;
     }
 }
 

@@ -1,0 +1,42 @@
+extends ../../partials/base
+
+block variables
+    - var title = 'Form | A11YUI'
+    - var assetPath = '../../'
+
+block page
+    .page
+        .container
+            h1 Form
+            
+            form.card.span-6
+                .card__body
+                    .form-group.span-8
+                        label.label(for="full-name") Full Name
+                        input#full-name.control(type="text")
+                    .form-group
+                        label.label(for="address-line-1") Address Line 1
+                        input#address-line-1.control(type="text")
+                    .form-group
+                        label.label(for="address-line-2") Address Line 2
+                        input#address-line-2.control(type="text")
+                    .form-group.span-6
+                        label.label(for="city") City
+                        input#city.control(type="text")
+                    .form-group.span-6
+                        label.label(for="state-province-region") State / Province / Region
+                        input#state-province-region.control(type="text")
+                    .form-group.span-6
+                        label.label(for="zip-postal-code") Zip / Postal Code
+                        input#zip-postal-code.control(type="text")
+                    .form-group
+                        label.label(for="country") Country
+                        select#country.control.span-2
+                            option USA
+                            option China
+                            option USSR
+                .card__footer
+                    button.button Reset
+                    button.button.button--primary Submit
+
+    script(src="modal.js")

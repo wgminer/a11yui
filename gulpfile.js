@@ -78,8 +78,10 @@ gulp.task('build', cb => {
 
 gulp.task('watch', () => {
     gulp.watch('scss/**/*.scss', {cwd: './src'}, ['scss']);
-    gulp.watch('**/*.pug', {cwd: './src'}, ['pug']);
-    gulp.watch('**/*.js', {cwd: './src'}, ['js']);
+    gulp.watch('**/*.pug', {cwd: './src'}, ['pug'])
+        .on('change', () => browserSync.reload);
+    gulp.watch('**/*.js', {cwd: './src'}, ['js'])
+        .on('change', () => browserSync.reload);
 });
 
 gulp.task('serve', cb => {
