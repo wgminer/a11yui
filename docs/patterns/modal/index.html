@@ -30,12 +30,14 @@
             </div>
             <div class="cell span-8">
               <h1>Modal</h1>
-              <button class="button" data-open-modal="#modal-example">Open Modal</button>
+              <button class="button" data-open-modal="#modal">Open Modal</button>
               <section class="example">
                 <ul class="tab-list">
                   <li class="tab is--active"><a href="">HTML</a></li>
                   <li class="tab"><a href="">JS</a></li>
                 </ul>
+                <div class="tab-panel" id="html"></div>
+                <div class="tab-panel" id="js"></div>
               </section>
               <section class="requirements">
                 <h2 class="h3">Requirements</h2>
@@ -53,7 +55,7 @@
                 </ol>
                 <h3 class="h5">Closing the modal</h3>
                 <ol>
-                  <li>Add remove or add <code class="code">display: none;</code> to the modal</li>
+                  <li>Add <code class="code">display: none;</code> or remove the modal from the DOM</li>
                   <li>Remove <code class="code">.u--no-scroll</code> class from the <code class="code">&lt;body&gt;</code> </li>
                   <li>Remove <code class="code">aria-hidden="true"</code> from all siblings of the modal</li>
                   <li>Place the users focus on the element that triggered the modal in the first place</li>
@@ -63,7 +65,7 @@
           </div>
         </div>
       </div>
-      <div class="modal-overlay" id="modal-example" style="display: none">
+      <div class="modal-overlay" id="modal" style="display: none" data-example="html">
         <div class="modal card" role="dialog">
           <button class="button button--close" data-trap-start data-open-focus data-close-modal type="button"><span class="icon icon--close" aria-hidden="true"></span></button>
           <h1 class="card__title">Modal Example</h1>
@@ -75,8 +77,10 @@
           </div>
         </div>
       </div>
-      <script src="modal.js"></script>
+      <script src="modal.js" data-example="js"></script>
     </main>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="../../js/a11yui.js"></script>
     <script>
       window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
       ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
