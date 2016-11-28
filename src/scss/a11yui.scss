@@ -75,6 +75,12 @@
 
 .example {
     margin: 3rem 0 0;
+
+    .tab-panel {
+        height: 400px;
+        overflow: auto;
+        background-color: #ccc;
+    }
 }
 
 .requirements {

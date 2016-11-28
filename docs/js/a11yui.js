@@ -7,7 +7,7 @@ $(function () {
         var type = $this.attr('data-example');
 
         function inject (code) {
-            $('#' + type).append(code);
+            $('#' + type).append('<pre><code>' + code + '</code></pre>');
         }
 
         if (type === 'html') {
