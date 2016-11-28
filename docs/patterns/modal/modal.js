@@ -50,12 +50,23 @@ var Modal = (function (document) {
             });
 
             // 6. Setup closing modal listeners
+
+            // Close on esc
             document.addEventListener('keyup', function(e) {
                 if (e.keyCode == 27) {
                     close();
                 }
             });
 
+            // Close on modal-overlay click
+            modal.addEventListener('click', function (e) {
+                if (e.target == modal) {
+                    close();
+                }
+            });
+
+
+            // Close on any other data-close-modal attributed elements
             modal.querySelectorAll('[data-close-modal]').forEach(function (el) {
                 el.addEventListener('click', function (e) {
                     close();

@@ -16,24 +16,62 @@
     <main>
       <div class="page">
         <div class="container">
-          <h1>Modal</h1>
-          <button class="button" data-open-modal="#modal-example">Open Modal</button>
-          <h2>Requirements</h2>
-          <p>To pull of an accessible modal you need a few things:</p>
-          <ol>
-            <li> </li>
-          </ol>
+          <div class="grid">
+            <div class="cell span-2">
+              <nav class="side-nav">
+                <h2 class="side-nav__title">Patterns</h2>
+                <ul>
+                  <li><a href="/patterns/dropdown">Dropdown</a></li>
+                  <li><a href="/patterns/form">Form</a></li>
+                  <li><a href="/patterns/modal">Modal</a></li>
+                  <li><a href="/patterns/speaker">Speaker</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="cell span-8">
+              <h1>Modal</h1>
+              <button class="button" data-open-modal="#modal-example">Open Modal</button>
+              <section class="example">
+                <ul class="tab-list">
+                  <li class="tab is--active"><a href="">HTML</a></li>
+                  <li class="tab"><a href="">JS</a></li>
+                </ul>
+              </section>
+              <section class="requirements">
+                <h2 class="h3">Requirements</h2>
+                <h3 class="h5">Opening the modal</h3>
+                <ol>
+                  <li>Place modal HTML as a direct child of the <code class="code">&lt;body&gt;</code></li>
+                  <li>Add <code class="code">.u--no-scroll</code> class to the <code class="code">&lt;body&gt;</code> </li>
+                  <li>Add <code class="code">aria-hidden="true"</code> to all siblings of the modal</li>
+                </ol>
+                <h3 class="h5">Inside the modal</h3>
+                <ol>
+                  <li>Once the modal is open, focus the user on the first focusable element within the modal.</li>
+                  <li>Trap the users focus inside of the modal</li>
+                  <li>Allow the user to close the modal by pressing the escape key</li>
+                </ol>
+                <h3 class="h5">Closing the modal</h3>
+                <ol>
+                  <li>Add remove or add <code class="code">display: none;</code> to the modal</li>
+                  <li>Remove <code class="code">.u--no-scroll</code> class from the <code class="code">&lt;body&gt;</code> </li>
+                  <li>Remove <code class="code">aria-hidden="true"</code> from all siblings of the modal</li>
+                  <li>Place the users focus on the element that triggered the modal in the first place</li>
+                </ol>
+              </section>
+            </div>
+          </div>
         </div>
       </div>
       <div class="modal-overlay" id="modal-example" style="display: none">
         <div class="modal card" role="dialog">
-          <button class="button button--close" data-trap-start="" data-open-focus="" data-close-modal="" type="button"><span class="icon icon--close" aria-hidden="true"></span></button>
+          <button class="button button--close" data-trap-start data-open-focus data-close-modal type="button"><span class="icon icon--close" aria-hidden="true"></span></button>
           <h1 class="card__title">Modal Example</h1>
           <div class="card__body">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aspernatur vero laborum alias est, repudiandae eius esse voluptate ex sit neque quidem reiciendis, accusantium dolorum distinctio aliquam non deserunt sequi.</p>
           </div>
           <div class="card__footer">
-            <button class="button" data-close-modal="" data-trap-end="">Done</button>
+            <button class="button" data-close-modal data-trap-end>Done</button>
           </div>
         </div>
       </div>

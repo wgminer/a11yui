@@ -1,10 +1,34 @@
 extends ../../partials/base
 
+block variables
+    - var title = 'Speaker | A11YUI'
+    - var assetPath = '../../'
+
 block page
-    main.page
+    .page
         .container
-            h1 Speaker
-            button.button(onclick="Speaker.play('I love lamp')") Click Me!
-            button.button(onclick="Speaker.asset('Loud noises')") Click Me!
+            .grid
+                .cell.span-2
+                    include ../../partials/patterns
+
+                .cell.span-8
+                    h1 Speaker
+                    .filter
+                        .form-group.span-4
+                            label.label(for="filter") Type to filter names
+                            input#filter.control(type="text")
+                    
+                    ul.tab-list
+                        li.tab.is--active
+                            a(href="") HTML
+                        li.tab
+                            a(href="") JS
+
+                    h2 Requirements
+                    ol
+                        li User initiates some action that displays the modal.
+                        li 
+
+
 
     script(src="speaker.js")
