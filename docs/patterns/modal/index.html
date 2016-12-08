@@ -6,7 +6,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Modal | A11YUI</title>
-    <link rel="stylesheet" href="https://d2725r7zw288co.cloudfront.net/cdn/v1/corp-gen/harmony.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/monokai.min.css">
+    <link rel="stylesheet" href="//d2725r7zw288co.cloudfront.net/cdn/v1/corp-gen/harmony.min.css">
     <link rel="stylesheet" href="../../css/a11yui.css">
   </head>
   <body>
@@ -33,11 +34,15 @@
               <button class="button" data-open-modal="#modal">Open Modal</button>
               <section class="example">
                 <ul class="tab-list">
-                  <li class="tab is--active"><a href="">HTML</a></li>
-                  <li class="tab"><a href="">JS</a></li>
+                  <li class="tab is--active">
+                    <button data-tab="html">HTML</button>
+                  </li>
+                  <li class="tab">
+                    <button data-tab="js">JS</button>
+                  </li>
                 </ul>
-                <div class="tab-panel" id="html"></div>
-                <div class="tab-panel is--active" id="js"></div>
+                <div class="tab-panel is--active" id="html"></div>
+                <div class="tab-panel" id="js"></div>
               </section>
               <section class="requirements">
                 <h2 class="h3">Requirements</h2>
@@ -79,12 +84,14 @@
       </div>
       <script src="modal.js" data-example="js"></script>
     </main>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="../../js/a11yui.js"></script>
+    <script></script>
     <script>
       window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
       ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
     </script>
-    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    <script src="//www.google-analytics.com/analytics.js" async defer></script>
   </body>
 </html>

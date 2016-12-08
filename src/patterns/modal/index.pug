@@ -18,11 +18,11 @@ block page
                     section.example
                         ul.tab-list
                             li.tab.is--active
-                                a(href="") HTML
+                                button(data-tab="html") HTML
                             li.tab
-                                a(href="") JS
-                        #html.tab-panel
-                        #js.tab-panel.is--active
+                                button(data-tab="js") JS
+                        #html.tab-panel.is--active
+                        #js.tab-panel
 
                     section.requirements
                         h2.h3 Requirements
